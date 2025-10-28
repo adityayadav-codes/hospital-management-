@@ -1,3 +1,5 @@
+//  index.js
+require('./db'); // connect to the database
 // login functionality
 const signUpButton = document.getElementById('Sign-Up');
 const projectName = 'Hospital Patient Management Api';
