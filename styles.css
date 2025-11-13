@@ -1,0 +1,231 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f8f9ff;
+      color: #333;
+    }
+
+    header {
+      width: 100%;
+      background-color: #3b82f6;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 60px;
+      flex-wrap: wrap;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .logo span {
+      color: #1e3a8a;
+      background-color: white;
+      padding: 3px 6px;
+      border-radius: 4px;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #dbeafe;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      margin-top: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 80px;
+      flex-wrap: wrap;
+      background: linear-gradient(135deg, #eff6ff, #ffffff);
+    }
+
+    .hero-content {
+      flex: 1;
+      max-width: 550px;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .hero-content h1 {
+      font-size: 38px;
+      font-weight: 700;
+      color: #1e3a8a;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 16px;
+      margin-bottom: 25px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .hero-content button {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero-content button:hover {
+      background-color: #1e40af;
+    }
+
+    .hero-image img {
+      width: 400px;
+      border-radius: 10px;
+      animation: fadeInRight 1.2s ease forwards;
+    }
+
+    /* Services Section */
+    .services {
+      text-align: center;
+      padding: 60px 40px;
+    }
+
+    .services h2 {
+      font-size: 28px;
+      color: #1e3a8a;
+      margin-bottom: 15px;
+    }
+
+    .services p {
+      color: #555;
+      margin-bottom: 40px;
+      font-size: 16px;
+    }
+
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+      justify-items: center;
+    }
+
+    .card {
+      background-color: #3b82f6;
+      color: white;
+      border-radius: 15px;
+      padding: 30px 20px;
+      text-align: center;
+      width: 230px;
+      box-shadow: 0 6px 15px rgba(59, 130, 246, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+    }
+
+    .card i {
+      font-size: 36px;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #dbeafe;
+    }
+
+    footer {
+      background-color: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInRight {
+      from {opacity: 0; transform: translateX(50px);}
+      to {opacity: 1; transform: translateX(0);}
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 25px;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #2563eb;
+        text-align: center;
+        padding: 15px 0;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .hero-image img {
+        width: 90%;
+        margin-top: 30px;
+      }
+    }
