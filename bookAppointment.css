@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f3f6ff;
+    font-family: "Poppins", sans-serif;
+}
+
+.appointment-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+h1 {
+    text-align: center;
+    color: #1c2a5e;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.appointment-form .form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    font-weight: 600;
+    color: #1c2a5e;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1.5px solid #d9d9d9;
+    margin-top: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #356df0;
+    box-shadow: 0 0 5px rgba(53,109,240,0.3);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #356df0;
+    color: #fff;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #244ed8;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .appointment-container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}
